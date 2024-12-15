@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="font/css/fontawesome.css">
+    <link rel="stylesheet" href="font/css/brands.css">
+    <link rel="stylesheet" href="font/css/solid.css">
+    <style>
+        body {
+        position: relative; 
+        }
+        @keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+.scroll-animate {
+  opacity: 0; 
+  transition: all 0.8s ease-out; 
+}
+
+.scroll-animate.visible {
+  animation: fadeSlide 1s forwards; 
+}
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible"); // Tambahkan class saat terlihat
+            } else {
+              entry.target.classList.remove("visible"); // Hapus class saat keluar
+            }
+          });
+        });
+      
+        // Pilih semua elemen dengan class 'scroll-animate'
+        const scrollElements = document.querySelectorAll(".scroll-animate");
+        scrollElements.forEach((el) => observer.observe(el));
+      });
+      </script>
+   
+    
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #25375C;">
+        <div class="container-fluid d-flex justify-content-center">
+          <a class="navbar-brand">
+            <img src="logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+          </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#Beranda">Beranda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Tentang">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Divisi">Divisi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Event">Event</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#HubungiKami">Hubungi Kami</a>
+                </li>
+              </ul>
+        </div>
+      </nav>
+    
+      <div id="Beranda" class="container-fluid d-flex flex-column align-items-center justify-content-start text-white scroll-animate" style="padding: 10vh 2%; background-image: url('Latar.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh; position: relative;">
+        <div class="overlay"></div>
+        <img src="logo.png" class="rounded-circle animated-image" style="width: 50%; max-width: 500px; z-index: 2;">
+        
+        <h1 style="z-index: 2; color: #25375C;">HIMPUNAN MAHASISWA INFORMATIKA</h1>
+        <h1 style="z-index: 2; color: #25375C;">UNIVERSITAS ANDALAS</h1>
+    </div>
+
+    <div style="background-color: #E5F2FD;">
+      <div id="Tentang" class="container text-white mb-2 scroll-animate" style="padding: 100px 20px; background-color: #1B2A41; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+        <h1 class="display-4 text-center">Tentang Kami</h1>
+  
+        <div class="row" style="margin: 20px 0;">
+            <div class="col-md-6 order-md-2">
+                <img src="logo.png" alt="Gambar 1" class="img-thumbnail" style="width: 70%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <h5 class="text-center mt-2" style="color: #f8f9fa;">Himpunan Mahasiswa Informatika Universitas Andalas</h5>
+            </div>
+            <div class="col-md-6 order-md-1">
+              <H1>HMIF UNAND</H1>
+                <p class="text-center" style="color: #f8f9fa;">Himpunan Mahasiswa Informatika (HMI) Universitas Andalas adalah sebuah organisasi mahasiswa yang bertujuan untuk menjadi wadah pengembangan minat,
+                   bakat, dan kepemimpinan bagi mahasiswa Program Studi Informatika di Universitas Andalas. HMI Universitas Andalas berfokus pada pembelajaran, pengembangan keterampilan di bidang teknologi informasi,
+                    serta peningkatan kreativitas dan inovasi melalui berbagai kegiatan seperti seminar, workshop, pelatihan, dan kompetisi. Organisasi ini juga berperan dalam menjalin hubungan antara mahasiswa, dosen, 
+                    serta industri teknologi, guna menciptakan mahasiswa yang siap bersaing di dunia profesional. HMI Universitas Andalas berkomitmen untuk menghasilkan lulusan yang tidak hanya unggul dalam aspek akademik,
+                     tetapi juga memiliki keterampilan sosial dan kepemimpinan yang baik.</p>
+            </div>
+        </div>
+  </div>
+  
+  <div class="container text-white mb-2 scroll-animate" style="padding: 100px 20px; background-color: #1B2A41; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+        <div class="row" style="margin: 20px 0;">
+          <div class="col-md-1"></div>
+            <div class="col-md-6 order-md-1">
+                <img src="Bunga.png" alt="Gambar 2" class="img-thumbnail" style="width: 70%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <h5 class="text-center" style="color: #f8f9fa;">Bunga Edelweiss</h5>
+            </div>
+            <div class="col-md-5 order-md-2">
+              <h1>Kabiner Edelweiss</h1>
+                <p class="text-center m-5" style="color: #f8f9fa;">Kabinet yang dibentuk untuk kepengurusan HMIF periode 2024/2025 diberi nama Kabinet Edelweiss. 
+                  Edelweiss adalah nama sebuah bunga yang sering dijadikan sebagai lambang keabadian. Kata bunga sendiri merepresentasikan 'berkembang', 
+                  yang mana HMIF pada periode 2024/2025 akan berkembang tidak hanya secara kuantitas, namun juga secara kualitas. Selain itu, 
+                  HMIF juga menjadi tempat bagi para anggotanya untuk berkembang. Lambang keabadian memberikan makna kekuatan dan ketahanan HMIF terhadap berbagai tantangan.</p>
+            </div>
+        </div>
+    </div>
+  
+    <div class="container text-white mb-2 scroll-animate" style="padding: 100px 20px; background-color: #1B2A41; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+  
+      <div class="row" style="margin: 20px 0;">
+          <div class="col-md-6 order-md-2">
+              <img src="PakLuthfil.jpeg" alt="Gambar 1" class="img-thumbnail" style="width: 70%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+              <h5 class="text-center mt-2" style="color: #f8f9fa;">PEMBINA HIMPUNAN</h5>
+          </div>
+          <div class="col-md-6 order-md-1">
+            <H1>PEMBINA HIMPUNAN</H1>
+            <p class="text-center" style="color: #f8f9fa;">Biografi Singkat :</p>
+            <p class="text-center" style="color: #f8f9fa;">Luthfil Khairi S.Kom, M.Cs.</p>
+            <p class="text-center" style="color: #f8f9fa;">Menjadi tenaga pendidik pada prodi Informatika Universitas Andalas</p>
+              <p class="text-center" style="color: #f8f9fa;">Pak Luthfil Khairi adalah pembina himpunan sekaligus tenaga pendidik yang mendukung perkembangan mahasiswa. 
+                Dengan pendekatan yang bijak dan profesional, beliau membimbing mahasiswa dalam kegiatan organisasi maupun akademik</p>
+          </div>
+      </div>
+  </div>
+    </div>
+    
+
+
+
+    <div id="Divisi" class="container-fluid text-white scroll-animation" style="padding:100px 20px; background-color: #25375C">
+      <h1 class="display-4 text-center" style="color: #ffff;">Divisi</h1>
+      <style> 
+        h1 { text-align: center;
+          margin: 0%;
+          padding: 20px;
+        }
+        h2{text-align: center;
+          margin: 0%;
+          padding: 20px;
+          color: #25375C;
+        }
+        div {text-align: center;
+          margin: 0%;
+          padding: 20px;
+
+        }
+      </style>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="DPP.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="DPP" data-bs-content="Dewan Penasehat Pengurus atau biasa disingkat DPP memiliki mandat serta berwenang mengawasi dan mengevaluasi kinerja kepengurusan HMIF pada periode 2024/2025.
+                ">Dewan Penasihat Pengurus</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="Sekum.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Sekum" data-bs-content="Press Inti adalah bagian dari HMIF yang menjadi pemimpin strategis, memiliki tanggung jawab dalam mengontrol kinerja setiap bagian himpunan, menjadi pengambil putusan tertinggi dalam himpunan, serta memastikan tercapainya tujuan serta visi misi himpunan dalam segala aspek.
+                
+                Leading with vision, moving with purpose, thriving with integrity. - INTI
+                ">Sekretaris Umum</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="Kahim.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Kahim dan Wakahim" data-bs-content="Press Inti adalah bagian dari HMIF yang menjadi pemimpin strategis, memiliki tanggung jawab dalam mengontrol kinerja setiap bagian himpunan, menjadi pengambil putusan tertinggi dalam himpunan, serta memastikan tercapainya tujuan serta visi misi himpunan dalam segala aspek.
+                
+                Leading with vision, moving with purpose, thriving with integrity. - INTI
+                ">Ketua dan Wakil Ketua</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="Bendum.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Bendum" data-bs-content="Press Inti adalah bagian dari HMIF yang menjadi pemimpin strategis, memiliki tanggung jawab dalam mengontrol kinerja setiap bagian himpunan, menjadi pengambil putusan tertinggi dalam himpunan, serta memastikan tercapainya tujuan serta visi misi himpunan dalam segala aspek.
+                
+                Leading with vision, moving with purpose, thriving with integrity. - INTI
+                ">Bendahara Umum</button></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="Adkesma.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Adkesma" data-bs-content="Divisi Advokasi dan Kesejahteraan Mahasiswa (Adkesma) adalah Divisi di HMIF yang bertugas sebagai jembatan antara mahasiswa/i dan pihak kampus dalam menyampaikan aspirasi, menangani masalah akademis dan non-akademis, serta memperjuangkan kesejahteraan mahasiswa/i. Divisi ini juga berperan dalam menginisiasi program-program yang mendukung hak-hak mahasiswa/i, seperti beasiswa, bantuan, dan fasilitas belajar.
+                
+                Bridging Aspirations, Supporting Student Well-being - ADKESMA">Advokasi dan Kesejahteraan Mahasiswa</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="HRD.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" 
+                title="HRD" data-bs-content="Divisi Human Resources Development (HRD) merupakan bidang yang berfokus untuk mewadahi peningkatan kompetensi dan pengembangan kemampuan non-teknis serta pelaksanaan kaderisasi mahasiswa/i Departemen Informatika.
+
+                Cultivating talent, empowering change. - HRD">Human Resources Development</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="Infomed.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Infomed" data-bs-content="Divisi Informasi dan Media (Infomed) adalah divisi di HMIF yang bertanggung jawab untuk mengelola dan menyebarkan informasi seputar kegiatan, prestasi, dan program-program yang ada di HMIF. Divisi ini berperan sebagai pusat komunikasi yang memastikan seluruh mahasiswa/i mendapat informasi terkini melalui berbagai platform media. Infomed juga bertugas mendesain konten kreatif yang informatif dan menarik untuk mempromosikan HMIF serta memperkuat citra positif organisasi.
+
+                Delivering Information, Creating Impact - INFOMED">Informasi dan Media</button></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="Eksternal.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Eksternal" data-bs-content="Divisi Eksternal adalah jembatan penghubung himpunan dengan dunia luar. Kami siap memperluas jaringan, menciptakan kerjasama baru, dan menghadapi tantangan dengan strategi yang cerdas. Setiap jabatan tangan adalah kesuksesan!
+
+                 Strong, Persistent, and Determined  - EKSTERNAL">Eksternal</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="Internal.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Internal" data-bs-content="Divisi ini berperan penting dalam membangun kebersamaan di dalam himpunan. Memelihara hubungan yang harmonis di antara anggota melalui kegiatan yang menumbuhkan kebersamaan dan memperkuat solidaritas. Menciptakan lingkungan yang saling mendukung dan inklusif, di mana setiap anggota merasa dihargai dan terhubung. Dengan semangat solidaritas yang kuat, divisi ini memastikan bahwa setiap individu merasa didukung dan dihargai, membangun fondasi kokoh untuk persatuan dan kerja sama jangka panjang dalam himpunan.
+
+                Strength in Unity, Solidarity in Action!!! - INTERNAL">Internal</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 scroll-animate">
+          <div class="card" style="background-color: #1B2A41;">
+            <div class="card-body"><img src="Entrepeneur.png" class="img-thumbnail" style="width: 90%; height: auto;"> 
+              <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Entrepeneur" data-bs-content="Entrepreneur merupakan bidang yang berfokus dalam pengembangan wirausaha dan bertujuan untuk mewadahi serta Mahasiswa/i Departemen Informatika yang ingin menjalankan kegiatan kewirausahaan, sehingga mereka dapat mengasah dan mengembangkan keterampilan, minat, serta potensi dalam bidang wirausaha melalui berbagai program dan kesempatan yang ada.
+
+                No money, No Party - ENTREPRENEUR">Entrepeneur</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Event" class="container-fluid text-white scroll-animate" style="padding:100px 20px; background-color: #25375C">
+      <h1 class="display-4 text-center">Event</h1>
+      
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+ 
+        <div class="carousel-indicators">
+         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+         <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="active"></button>
+          </div>
+
+
+         <div class="carousel-inner">
+         <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-3 scroll-animate">
+          <h1>Contoh Event</h1>
+            <div class="card" style="background-color: #1B2A41;">
+              <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-3 scroll-animate">
+            <h1>Contoh Event</h1>
+              <div class="card" style="background-color: #1B2A41;">
+                <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                  <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 scroll-animate">
+              <h1>Contoh Event</h1>
+                <div class="card" style="background-color: #1B2A41;">
+                  <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                    <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 scroll-animate">
+                <h1>Contoh Event</h1>
+                  <div class="card" style="background-color: #1B2A41;">
+                    <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                      <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+         </div>
+         <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-3 scroll-animate">
+          <h1>Contoh Event</h1>
+            <div class="card" style="background-color: #1B2A41;">
+              <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-3 scroll-animate">
+            <h1>Contoh Event</h1>
+              <div class="card" style="background-color: #1B2A41;">
+                <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                  <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 scroll-animate">
+              <h1>Contoh Event</h1>
+                <div class="card" style="background-color: #1B2A41;">
+                  <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                    <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 scroll-animate">
+                <h1>Contoh Event</h1>
+                  <div class="card" style="background-color: #1B2A41;">
+                    <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                      <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+         </div>
+         <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-3 scroll-animate">
+          <h1>Contoh Event</h1>
+            <div class="card" style="background-color: #1B2A41;">
+              <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-3 scroll-animate">
+            <h1>Contoh Event</h1>
+              <div class="card" style="background-color: #1B2A41;">
+                <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                  <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 scroll-animate">
+              <h1>Contoh Event</h1>
+                <div class="card" style="background-color: #1B2A41;">
+                  <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                    <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 scroll-animate">
+                <h1>Contoh Event</h1>
+                  <div class="card" style="background-color: #1B2A41;">
+                    <div class="card-body"><img src="Contoh.png" class="img-thumbnail" style="width: 100%; height: auto;"> 
+                      <div class="container mt-3"><button type="button" class="btn btn-warning" data-bs-toggle="popover" title="Contoh" data-bs-content="Detail Event Serta Foto Lain">Selengkapnya</button></div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+         </div>
+         </div>
+
+  
+         <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+           <span class="carousel-control-next-icon"></span>
+          </button>
+          </div>     
+    </div>
+
+
+    <div id="HubungiKami" class="container-fluid text-white scroll-animate" style="padding:100px 20px; background-color: #1B2A41">
+      <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+    
+        .container-fluid {
+            padding: 0;
+        }
+    
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .contact-map {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    
+        .contact-map iframe {
+            width: 100%;
+            height: 500px;
+            border: 0;
+        }
+    
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #25375C;
+        }
+    
+        .contact-info h2, .contact-info h1 {
+            color: #25375C;
+            margin-bottom: 20px;
+        }
+    
+        .contact-info p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+    
+        .form-group {
+            margin-bottom: 20px;
+        }
+    
+        label {
+            font-size: 14px;
+            color: #25375C;
+            margin-bottom: 8px;
+        }
+    
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 4px;
+            background-color: #f9f9f9;
+        }
+    
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+    
+        button {
+            background-color: #25375C;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        button:hover {
+            background-color: #1f2d47;
+        }
+    
+        .social-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    
+        .social-button {
+            background-color: #25375C;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .social-button:hover {
+            background-color: #1f2d47;
+        }
+    
+        .social-button i {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+      </style>
+    <h1 class="display-4 text-center">Hubungi Kami</h1>
+      <div class="contact-container">
+        <!-- Peta -->
+        <div class="contact-map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9287489175715!2d100.46100582042267!3d-0.9152874829961343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b8b4b6f7f70f%3A0x123456789abcdef!2sNama%20Lokasi!5e0!3m2!1sid!2sid!4v1716192678975!5m2!1sid!2sid" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+        
+        <!-- Kontak Info -->
+        <div class="contact-info">
+          <h2>Universitas Andalas</h2>
+          <h1>Hubungi Kami</h1>
+          <p>Silakan isi form di bawah ini untuk menghubungi kami.</p>
+    
+          <form id="contactForm" action="#" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+              <label for="name">Nama Lengkap:</label>
+              <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
+            </div>
+    
+            <div class="form-group">
+              <label for="message">Pesan:</label>
+              <textarea id="message" name="message" required placeholder="Tulis pesan Anda"></textarea>
+            </div>
+    
+            <button type="submit">Kirim Pesan</button>
+          </form>
+    
+          <div class="social-container">
+            <a href="https://www.instagram.com/hmif_unand/?hl=id" class="social-button" style="color: #ffff;">
+              Instagram HMIF
+            </a>
+          </div>
+        </div>
+      </div>
+    
+      <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            if (!name || !email || !message) {
+                alert("Semua field harus diisi.");
+                return false;
+            }
+    
+            alert("Pesan Anda telah terkirim.");
+            return true;
+        }
+      </script>
+    </div>
+    
+    
+    <script>
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+      </script>
+</body>
+</html>
